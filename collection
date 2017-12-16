@@ -1,0 +1,23 @@
+#js for zoom click
+#https://jule-watches.myshopify.com/collections/watch/products/rose-gold-white-black
+
+<script type="text/javascript">
+$('.img1').click(function () {
+		console.log('sdsdf');	
+        // if($(this).hasClass('zoomed')){      
+        //     $('.zoomContainer').remove();
+        //     $(this).removeClass('zoomed');           
+        // }else{
+            $(this).elevateZoom({ gallery: 'gallery_01', cursor: 'pointer', galleryActiveClass: "active", scrollZoom : false });
+            $(this).addClass('zoomed');          
+        // }
+});
+
+$(document).on('mouseleave' ,'.zoomContainer' , function() {
+        if($('.img1').hasClass('zoomed')){      
+            $('.zoomContainer').remove();
+            $('.img1').removeClass('zoomed');           
+        }
+});
+
+</script>
