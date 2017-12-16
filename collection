@@ -1,6 +1,16 @@
 #js for zoom click
 #https://jule-watches.myshopify.com/collections/watch/products/rose-gold-white-black
+#image
 
+<div class="slider slider-for">
+   {% for image in product.images %}
+  <div>
+<img class="img1" rel="gallery1" src="{{ image | product_img_url: '1024x1024' }}" data-zoom-image="{{ image | product_img_url: '1024x1024' }}" /> 
+  </div>
+  {%endfor%}
+</div>
+
+#js
 <script type="text/javascript">
 $('.img1').click(function () {
 		console.log('sdsdf');	
